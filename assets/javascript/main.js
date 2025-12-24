@@ -389,3 +389,15 @@ ta.addEventListener("keydown", (e) => {
     e.preventDefault();
   }
 });
+
+document.querySelector(".undoBtn") .addEventListener("click", () => {
+  const event = new KeyboardEvent("keydown", {
+    key: "z",
+    code: "KeyZ",
+    ctrlKey: true, 
+    metaKey: true,  
+    bubbles: true
+  });
+
+  document.dispatchEvent(event);
+});
