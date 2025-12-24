@@ -379,11 +379,13 @@ editor.querySelector("button").addEventListener("click", (e) => {
   }
   console.log();
   const oldCT = elementEdting.querySelector(".content").innerText;
-  elementEdting.querySelector(".content").innerText =
-    editor.querySelector("textarea").value;
+  if(oldCT == editor.querySelector("textarea").value){
+      editor.style.display = "none";
+      return;
+  }
+  elementEdting.querySelector(".content").innerText = editor.querySelector("textarea").value;
 
   let undoStack = JSON.parse(localStorage.getItem("undoStack"));
-  let idx;
   undoStack.push({
     action: "changeContent",
     index: elementEdtingidx,
