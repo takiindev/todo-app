@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do app</title>
+    <link rel="stylesheet" href="./assets/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <ul class="list">
+      </ul>
+      <div class="actionBar">
+        <div class="select">
+          <div class="fake">Tất cả</div>
+          <select name="" id="">
+            <option value="1">Tất cả</option>
+            <option value="2">Đã làm</option>
+            <option value="3">Chưa làm</option>
+          </select>
+        </div>
+        <div class="searchBar">
+          <input type="text" placeholder="Thêm công việc" />
+          <button>
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="readme" popovertarget="readmePopup">?</button>
+
+    <div id="readmePopup" popover>
+      <h1>Lưu ý:</h1>
+      <p>
+        Khi bạn sử dụng chức năng lọc với sự lựa chọn là "Đã làm" hoặc "Chưa
+        làm" thì các thao tác đổi vị trí các công sẽ không được lưu lại.
+      </p>
+    </div>
+
+    <div class="trashContainer">
+      <div class="trash">
+        <svg
+          width="30"
+          height="11"
+          viewBox="0 0 30 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18.6426 0C19.7413 0 20.7953 0.432352 21.5723 1.20215C22.3492 1.97203 22.7861 3.01669 22.7861 4.10547V6.1582H29V10.2627H0V6.1582H6.21387V4.10547C6.21387 3.01669 6.6508 1.97203 7.42773 1.20215C8.20466 0.432352 9.25874 0 10.3574 0H18.6426ZM10.3574 6.1582H18.6426V4.10547H10.3574V6.1582Z"
+            fill="#D24040"
+          />
+        </svg>
+
+        <svg
+          width="25"
+          height="27"
+          viewBox="0 0 25 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.6406 22.8359C22.5747 23.8782 22.1099 24.8563 21.3418 25.5713C20.5737 26.2862 19.5597 26.6845 18.5059 26.6846H5.57617C4.52235 26.6845 3.50835 26.2862 2.74023 25.5713C1.97211 24.8563 1.50729 23.8782 1.44141 22.8359L0 0H24.0801L22.6406 22.8359Z"
+            fill="#D24040"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="editor">
+      <div class="editBar">
+        <div><textarea type="text" placeholder="Công việc" /></textarea></div> <br>
+        <button>
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M33.3333 40V22.2222H6.66667V40H2.22222C1.63285 40 1.06762 39.7659 0.650874 39.3491C0.234126 38.9324 0 38.3671 0 37.7778V2.22222C0 1.63285 0.234126 1.06762 0.650874 0.650874C1.06762 0.234126 1.63285 0 2.22222 0H31.1111L40 8.88889V37.7778C40 38.3671 39.7659 38.9324 39.3491 39.3491C38.9324 39.7659 38.3671 40 37.7778 40H33.3333ZM28.8889 40H11.1111V26.6667H28.8889V40Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./assets/javascript/main.js"></script>
+  </body>
+</html>
