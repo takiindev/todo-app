@@ -430,7 +430,6 @@ body {
         .wrapper {
             .list {
                 li {
-                    min-height: 40px;
                     gap: 5px;
                     padding-inline: 20px;
                     border-radius: 10px;
@@ -460,11 +459,10 @@ body {
                 }
 
                 .searchBar {
-                    height: 40px;
 
                     input {
                         width: calc(100% - 20px);
-                        padding-inline: 20px 30px;
+                        padding-inline: 10px 50px;
                         font-size: 14px;
                         border-radius: 10px;
                     }
