@@ -375,7 +375,7 @@ editor.querySelector("button").addEventListener("click", (e) => {
     localStorage.setItem("undoStack", JSON.stringify(undoStack));
     elementEdting.remove();
     updateListItem();
-
+    return;
   }
   console.log();
   const oldCT = elementEdting.querySelector(".content").innerText;
