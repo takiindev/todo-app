@@ -46,7 +46,6 @@ body {
 
                 .status {
                     cursor: pointer;
-                    height: 80px;
                     display: flex;
                     align-items: center;
                     clip-path: circle();
@@ -71,7 +70,6 @@ body {
                     cursor: pointer;
                     user-select: none;
                     display: inline-flex;
-                    min-height: 80px;
                     flex-wrap: wrap;
                     font-family: 'Roboto';
                     font-style: normal;
@@ -376,5 +374,114 @@ body {
             aspect-ratio: 1/1;
             border: none;
         }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        .wrapper {
+            .list {
+                li {
+                    min-height: 60px;
+                    gap: 10px;
+                    padding-inline: 20px;
+
+                    .content {
+                        font-size: 20px;
+                    }
+
+                    .status {
+                        .fake_checkbox {
+                            width: 25px;
+
+                            img {
+                                width: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .actionBar {
+                .searchBar {
+                    height: 60px;
+
+                    input {
+                        width: calc(100% - 30px);
+                        padding-inline: 20px 50px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .readme {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    body {
+        .wrapper {
+            .list {
+                li {
+                    min-height: 40px;
+                    gap: 5px;
+                    padding-inline: 20px;
+                    border-radius: 10px;
+                    .content {
+                        font-size: 16px;
+                    }
+
+                    .status {
+                        .fake_checkbox {
+                            width: 15px;
+                            border-width: 1.5px;
+                            img {
+                                width: 10px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            .actionBar {
+                .select {
+                    .fake{
+                        width: 80px;
+                        font-size: 12px;
+                    }
+                }
+
+                .searchBar {
+                    height: 40px;
+
+                    input {
+                        width: calc(100% - 20px);
+                        padding-inline: 20px 30px;
+                        font-size: 14px;
+                        border-radius: 10px;
+                    }
+
+                    button {
+
+                        .horizontal,
+                        .vertical {
+                            width: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .readme {
+        width: 40px;
+        height: 40px;
     }
 }
