@@ -402,9 +402,10 @@ body {
 
 @media screen and (max-width: 600px) {
     body {
-        padding-inline: 75px;
+        padding-inline: 40px;
 
         .wrapper {
+            padding-bottom: 50px;
             .list {
                 li {
                     min-height: 60px;
