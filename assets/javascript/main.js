@@ -236,7 +236,7 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 function submit(text, done) {
-  if (text != "") {
+  if (text.trim() != "") {
     listItem.push({ text, done });
     localStorage.setItem("listItem", JSON.stringify(listItem));
     render(text, done);
