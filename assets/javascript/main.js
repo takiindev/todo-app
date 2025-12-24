@@ -375,6 +375,7 @@ editor.querySelector("button").addEventListener("click", (e) => {
     localStorage.setItem("undoStack", JSON.stringify(undoStack));
     elementEdting.remove();
     updateListItem();
+    editor.style.display = "none";
     return;
   }
   console.log();
