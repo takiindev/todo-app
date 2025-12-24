@@ -364,6 +364,19 @@ list.addEventListener("dblclick", (e) => {
 });
 
 editor.querySelector("button").addEventListener("click", (e) => {
+  if(editor.querySelector("textarea").value.trim() == ""){
+    let undoStack = JSON.parse(localStorage.getItem("undoStack"));
+    let idx;
+    undoStack.push({
+      action: "removeItem",
+      index: elementEdtingidx,
+      element: JSON.parse(JSON.stringify(listItem[elementEdtingidx])),
+    });
+    localStorage.setItem("undoStack", JSON.stringify(undoStack));
+    elementEdting.remove();
+    updateListItem();
+
+  }
   console.log();
   const oldCT = elementEdting.querySelector(".content").innerText;
   elementEdting.querySelector(".content").innerText =
